@@ -3,7 +3,7 @@
 echo "gen_misc.sh version 20150511"
 echo ""
 
-find ./ -name "*.c" | touch
+find ./ -name "*.c" | xargs touch
 make COMPILE=gcc BOOT=new APP=1 SPI_SPEED=40 SPI_MODE=QUI SPI_SIZE_MAP=6
 exit
 
