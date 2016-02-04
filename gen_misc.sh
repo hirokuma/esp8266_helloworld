@@ -3,7 +3,7 @@
 echo "gen_misc.sh version 20150511"
 echo ""
 
-find ./ -name "*.c" | xargs touch
+touch user/user_main.c
 make COMPILE=gcc BOOT=new APP=1 SPI_SPEED=40 SPI_MODE=QUI SPI_SIZE_MAP=6
 exit
 
@@ -145,6 +145,9 @@ else
 fi
 
 echo ""
+
+touch user/user_main.c
+
 echo ""
 echo "start..."
 echo ""
